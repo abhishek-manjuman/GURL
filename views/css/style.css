@@ -1,0 +1,11 @@
+body{
+    background-color: aliceblue;
+}
+
+/* =========   Login Page  ======== */
+.ui.segment.basic>.login-panel{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+

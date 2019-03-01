@@ -1,0 +1,17 @@
+{
+  "name": "gurl",
+  "version": "1.0.0",
+  "description": "Galgotias University Resource Locater",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhishek maurya and Adarsh Singh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  }
+}
