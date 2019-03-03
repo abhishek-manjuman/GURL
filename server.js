@@ -23,18 +23,6 @@ app.get('/', function(req, res){
     res.render('index.ejs')
 })
 
-app.post('/', function(req, res){
-    //send back a page with the name of the user on it
-    var userid= req.body.adminLoginUserid
-    var pass= req.body.adminLoginPass
-    res.render('admindashboard.ejs', { userid : userid, pass : pass })
-    
-})
-app.post('/admindashboard.ejs', function(req, res){
-    //send back a page with the name of the user on it
-    res.render('admin.ejs')
-    
-})
 // Create predefine port number 
 //First part accesss the envirnment port autometicaly if it is free
 //Other wise its use 3000
