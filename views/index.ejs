@@ -6,18 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GURL</title>
     
-<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCxj3ui9J8yNR8ggBlcFZyb9hojORs8_wY",
-    authDomain: "gurl-3a50b.firebaseapp.com",
-    databaseURL: "https://gurl-3a50b.firebaseio.com",
-    projectId: "gurl-3a50b",
-    storageBucket: "gurl-3a50b.appspot.com",
-    messagingSenderId: "1077432197158"
-  };
-  firebase.initializeApp(config);
+  
 </script>
     <!-- ====== CSS Page ===== -->
     <link rel="stylesheet" href="css/semantic.min.css">
@@ -54,7 +48,7 @@
                         </div>
                     </div>
                     <div class="ui header center aligned">
-                        <button type="button" onclick="login()" class="ui button orange inverted massive">LOGIN</button>
+                        <button type="button" id="adminLoginBtn" class="ui button orange inverted massive">LOGIN</button>
                     </div>
                 </form>
             </div>
