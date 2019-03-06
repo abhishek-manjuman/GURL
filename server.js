@@ -23,6 +23,16 @@ app.get('/', function(req, res){
     res.render('index.ejs')
 })
 
+app.get('/admindashboard', function(req, res){
+    res.render('admindashboard.ejs')
+})
+app.get('/addFaculty', function(req, res){
+    res.render('addFaculty.ejs')
+})
+app.post('/newAdmin', function(req, res){
+    res.render('newAdmin.html')
+})
+
 // Create predefine port number 
 //First part accesss the envirnment port autometicaly if it is free
 //Other wise its use 3000

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add New Faculty</title>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+    <script>
+      // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCxj3ui9J8yNR8ggBlcFZyb9hojORs8_wY",
+    authDomain: "gurl-3a50b.firebaseapp.com",
+    databaseURL: "https://gurl-3a50b.firebaseio.com",
+    projectId: "gurl-3a50b",
+    storageBucket: "gurl-3a50b.appspot.com",
+    messagingSenderId: "1077432197158"
+  };
+  firebase.initializeApp(config);
+
+    </script>
+
+        <!-- ====== CSS Page ===== -->
+        <link rel="stylesheet" href="css/semantic.min.css">
+        <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="ui container add-faculty">
+        <div class="ui segment very padded basic">
+            <div class="ui segment raised orange very padded tall stacked">
+                <h1 class="ui icon center aligned header">
+                    <img class="ui image" src="images/Galgotias_University_logo.png" alt="GU ICON">
+                    <div class="conent">
+                        GURL
+                        <div class="sub header">
+                            GALGOTIAS UNIVERSITY RESOURCE LOCATER
+                        </div>
+                    </div>
+                </h1>
+                <div class="ui horizontal divider">Add New Faculty</div>
+                <form class="ui form">
+                    <h4 class="ui dividing header">Basic Information</h4>
+                    <div class="field">
+                      <!-- <label>Name</label> -->
+                      <div class="four fields">
+                        <div class="field">
+                                <select class="ui dropdown title" id="title">
+                                        <option value="" >Title*</option>
+                                        <option value="Mr">Mr</option>
+                                        <option value="Mis">Mis</option>
+                                        <option value="dr">Dr</option>
+                                        <option value="Er">Er</option>
+                                        <option value="jrpro"> Jr. Pro</option>
+                                        <option value="srpro">Sr. Pro</option>
+                                </select>
+                        </div>
+                        <div class="field">
+                          <input type="text" name="first-name" id="fname" placeholder="First Name*">
+                        </div>
+                        <div class="field">
+                          <input type="text" name="midle-name" id="mname" placeholder="Midel Name">
+                        </div>
+                        <div class="field">
+                          <input type="text" name="last-name" id="lname" placeholder="Last Name*">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field">
+                        <!-- <label>Name</label> -->
+                        <div class="three fields">
+                            <div class="field">
+                                <select class="ui dropdown gender" id="gender">
+                                        <option value="" >Gender*</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <input type="number" name="last-name" id="phnumber" placeholder="Contact number*">
+                            </div>
+                            <div class="field">
+                                    <input type="email" name="last-name" id="email" placeholder="Email address">
+                            </div>
+                        </div>
+                    
+                    <!-- =========================== Educational Informetion ============= -->
+                    
+                    <h4 class="ui dividing header">Educational Information</h4>
+                    <div class="field">
+                      <div class="two fields">
+                        <div class="field">
+                          <input type="text" name="higest-qualification" id="hq" placeholder="Higest Qualification">
+                        </div>
+                        <div class="field">
+                          <input type="text" name="qualification-area" id="hqa" placeholder="Higest Qualification In (Area)">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="two fields">
+                        <div class="field">
+                                <select class="ui dropdown gender working" id="iwe">
+                                        <option value="" >Industry Working Experience</option>
+                                        <option value="0to1">0 to 1 Year</option>
+                                        <option value="2to4">2 to 4 Year</option>
+                                        <option value="5to7">5 to 7 Year</option>
+                                        <option value="8to10">8 to 10 Year</option>
+                                        <option value="morethen10">More then 10 Year</option>
+                                </select>
+                        </div>
+                        <div class="field">
+                                <select class="ui dropdown gender teaching" id="te">
+                                        <option value="" >Teaching Experience</option>
+                                        <option value="0to1">0 to 1 Year</option>
+                                        <option value="2to4">2 to 4 Year</option>
+                                        <option value="5to7">5 to 7 Year</option>
+                                        <option value="8to10">8 to 10 Year</option>
+                                        <option value="morethen10">More then 10 Year</option>
+                                </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field">
+                            <textarea rows="2" placeholder="About Projects/Papers/Awards/Achivments" id="about"></textarea>
+                    </div>
+
+                    
+                    <!-- =========================== University Informetion ============= -->
+                    
+                    <h4 class="ui dividing header">University Information</h4>
+
+                    <div class="field">
+                            <div class="two fields">
+                              <div class="field">
+                                      <select class="ui dropdown gender working" id="department">
+                                              <option value="" >Department*</option>
+                                              <option value="scse">SCSE</option>
+                                      </select>
+                              </div>
+                              <div class="field">
+                                      <select class="ui dropdown gender teaching" id="designation">
+                                              <option value="" >Designation</option>
+                                              <option value="dean">Dean</option>
+                                              <option value="faculty">Faculty</option>
+                                      </select>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="field">
+                            <div class="two fields">
+                              <div class="field">
+                                      <select class="ui dropdown gender working" id="block">
+                                              <option value="" >Block*</option>
+                                              <option value="a">A-Block</option>
+                                              <option value="b">B-Block</option>
+                                              <option value="c">C-Block</option>
+                                      </select>
+                              </div>
+                              <div class="field">
+                                  <input type="number" placeholder="Cabin Number*" id="cabin">
+                              </div>
+                            </div>
+                    </div>
+                    <div class="ui header right aligned">
+                        <div class="ui button huge inverted orange"  onclick="addFaculty()">SUBMIT</div>
+                    </div>
+                  </form>
+
+        </div>
+        </div>
+    </div>
+    <!-- ===========  JS File   ======== -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="backend_js/addNewFaculty.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -44,24 +44,36 @@
                         </div>
                     </div>
                 </h1>
-                <div class="ui horizontal divider">ADMIN LOGIN</div>
+                <div class="ui horizontal divider">New ADMIN</div>
 
                 <form class="ui form huge">
                     <div class="field">
                         <div class="ui left icon input">
-                            <input type="text" id="adminLoginUserid" placeholder="User ID" autofocus required>
+                            <input type="text" id="adminName" placeholder="Name" autofocus required>
                             <i class="user icon"></i>
                         </div>
 
                     </div>
                     <div class="field">
                         <div class="ui left icon input">
-                            <input type="password" id="adminLoginPass" placeholder="Password" required>
+                            <input type="email" id="adminEmail" placeholder="Email" required>
+                            <i class="envelope icon"></i>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <input type="number" id="adminPhnumber" placeholder="Phone Number" required>
+                            <i class="phone icon"></i>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <input type="password" id="adminPass" placeholder="Password" required>
                             <i class="lock icon"></i>
                         </div>
                     </div>
                     <div class="ui header center aligned">
-                        <button type="button" onclick="adminlogin()" id="adminLoginBtn" class="ui button orange inverted massive">LOGIN</button>
+                        <button type="button" onclick="addAdmin()" id="adminBtn" class="ui button orange inverted massive">SUBMIT</button>
                     </div>
                 </form>
             </div>
@@ -81,6 +93,6 @@
     <!-- ===========  JS File   ======== -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/semantic.min.js"></script>
-    <script src="backend_js/adminLogin.js"></script>
+    <script src="backend_js/newAdmin.js"></script>
 </body>
 </html>
