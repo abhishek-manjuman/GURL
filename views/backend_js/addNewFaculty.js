@@ -1,5 +1,5 @@
-function gotoPage(){
-    window.open('./addFaculty', '_self')
+function gotoPageAddFaculty(){
+    window.open('./addFaculty', '_blank')
 }
 
 function addFaculty(){
@@ -7,13 +7,13 @@ function addFaculty(){
     var newAdminRef = database.ref('/faculty')
 
     var title = document.getElementById('title').value.trim()
-    var fname = document.getElementById('fname').value
-    var mname = document.getElementById('mname').value
-    var lname = document.getElementById('lname').value
-    var email = document.getElementById('email').value
-    var phnumber = document.getElementById('phnumber').value
-    var gender = document.getElementById('gender').value
-    var highestQualifucation = document.getElementById('hq').value
+    var fname = document.getElementById('fname').value.trim()
+    var mname = document.getElementById('mname').value.trim()
+    var lname = document.getElementById('lname').value.trim()
+    var email = document.getElementById('email').value.trim()
+    var phnumber = document.getElementById('phnumber').value.trim()
+    var gender = document.getElementById('gender').value.trim()
+    var highestQualifucation = document.getElementById('hq').value.trim()
     var highestQualifucationArea = document.getElementById('hqa').value
     var industryExprience = document.getElementById('iwe').value
     var teachingExprience = document.getElementById('te').value
@@ -85,22 +85,22 @@ function addFaculty(){
             });
         }
 
-    console.log(title)
-    console.log(fname)
-    console.log(mname)
-    console.log(lname)
-    console.log(email)
-    console.log(phnumber)
-    console.log(gender)
-    console.log(highestQualifucation)
-    console.log(highestQualifucationArea)
-    console.log(industryExprience)
-    console.log(teachingExprience)
-    console.log(about)
-    console.log(department)
-    console.log(designation)
-    console.log(block)
-    console.log(cabinNumber)
+    // console.log(title)
+    // console.log(fname)
+    // console.log(mname)
+    // console.log(lname)
+    // console.log(email)
+    // console.log(phnumber)
+    // console.log(gender)
+    // console.log(highestQualifucation)
+    // console.log(highestQualifucationArea)
+    // console.log(industryExprience)
+    // console.log(teachingExprience)
+    // console.log(about)
+    // console.log(department)
+    // console.log(designation)
+    // console.log(block)
+    // console.log(cabinNumber)
 
     
 }

@@ -24,6 +24,7 @@ app.get('/', function(req, res){
 })
 
 app.get('/admindashboard', function(req, res){
+
     res.render('admindashboard.ejs')
 })
 app.get('/addFaculty', function(req, res){
@@ -31,6 +32,12 @@ app.get('/addFaculty', function(req, res){
 })
 app.post('/newAdmin', function(req, res){
     res.render('newAdmin.html')
+})
+app.get('/department', function(req, res){
+    res.render('department.ejs')
+})
+app.get('/addProgram', function(req, res){
+    res.render('addProgram.ejs')
 })
 
 // Create predefine port number 

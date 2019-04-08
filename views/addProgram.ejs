@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add New Program</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+    <script>
+      // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCxj3ui9J8yNR8ggBlcFZyb9hojORs8_wY",
+    authDomain: "gurl-3a50b.firebaseapp.com",
+    databaseURL: "https://gurl-3a50b.firebaseio.com",
+    projectId: "gurl-3a50b",
+    storageBucket: "gurl-3a50b.appspot.com",
+    messagingSenderId: "1077432197158"
+  };
+  firebase.initializeApp(config);
+
+    </script>
+
+        <!-- ====== CSS Page ===== -->
+        <link rel="stylesheet" href="css/semantic.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+        <div class="ui container add-faculty">
+                <div class="ui segment very padded basic">
+                    <div class="ui segment raised orange very padded tall stacked">
+                        <h1 class="ui icon center aligned header">
+                            <img class="ui image" src="images/Galgotias_University_logo.png" alt="GU ICON">
+                            <div class="conent">
+                                GURL
+                                <div class="sub header">
+                                    GALGOTIAS UNIVERSITY RESOURCE LOCATER
+                                </div>
+                            </div>
+                        </h1>
+                        <div class="ui horizontal divider">Add New Program</div>
+                        <form class="ui form">
+                            <h4 class="ui dividing header">Basic Information</h4>
+                            <div class="field">
+                              <!-- <label>Name</label> -->
+                              <div class="two fields">
+                                <div class="field">
+                                  <input type="text" name="program_name" id="program_name" placeholder="Program Full Name*" required>
+                                </div>
+                                <div class="field">
+                                  <input type="text" name="program_code" id="program_code" placeholder="Program Code*" required>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="field">
+                                    <textarea rows="2" placeholder="Details*" id="about" required></textarea>
+                            </div>
+        
+                            
+                            <div class="ui header right aligned">
+                                <div class="ui button huge inverted orange"  onclick="addProgram()">SUBMIT</div>
+                            </div>
+                          </form>
+        
+                </div>
+                </div>
+            </div>
+            <!-- ===========  JS File   ======== -->
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="js/semantic.min.js"></script>
+            <script src="backend_js/addNewFaculty.js"></script>
+            <script src="backend_js/addNewProgram.js"></script>
+
+            <script src="js/main.js"></script>
+
+</body>
+</html>
